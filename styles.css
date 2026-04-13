@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portada {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.datos {
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.datos p {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.datos p:last-child {
+    border-bottom: none;
+}
+
+.datos strong {
+    color: #ffd700;
+}
+
+/* MARQUESINA MODERNA */
+.marquesina-container {
+    background: rgba(0,0,0,0.6);
+    border-radius: 50px;
+    padding: 12px 20px;
+    margin: 30px 0;
+    overflow: hidden;
+    border: 1px solid #ffd700;
+}
+
+.marquesina {
+    white-space: nowrap;
+    color: #ffd700;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: desplazar 12s linear infinite;
+}
+
+@keyframes desplazar {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.marquesina:hover {
+    animation-play-state: paused;
+}
+
+.btn-ingresar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    border: none;
+    border-radius: 50px;
+    color: #1a1a2e;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-ingresar:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+}
+
+@media (max-width: 500px) {
+    .portada { padding: 30px 20px; }
+    h1 { font-size: 1.8rem; }
+    .datos p { font-size: 1rem; }
+}
